@@ -1,17 +1,20 @@
-import React, { useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
+import SvarBox from './components/SvarBox';
+import TextComponent from './components/TextComponent';
+import HamburgerMenu from './components/HamburgerMeny'
+
+
+import './index.css';
 
 function App() {
-  useEffect(() => {
-    axios.get('http://localhost:5000')
-      .then((response) => {
-        console.log(response.data);
-      });
-  }, []);
-
   return (
     <div className="App">
-      {/* Innholdet i appen din her */}
+
+      <HamburgerMenu/>
+      <TextComponent text="List tre ting du er takknemlig for idag."  />
+      <SvarBox />
+
+
     </div>
   );
 }

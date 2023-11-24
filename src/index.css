@@ -5,9 +5,45 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(57, 0, 153);
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.TextComponent {
+  color: black;
+  font-size: large;
+  background-color: wheat;
+  padding: 20px; /* legger til litt plass rundt teksten */
+  border-radius: 5px; /* gjør hjørnene på boksen litt rundet */
+  width: 45%; /* setter en fast bredde på boksen */
+  margin: 25% auto 60px; /* sentrerer boksen horisontalt og setter margin-bottom til 20px */
+  border-style: solid;
+  border-color: rgb(251, 86, 7);
+  border-width: 0.6cm;
+}
+
+.SvarBox {
+  font-size: large;
+  background-color: wheat;
+  display: flex;
+  align-items: center;
+  width: 50%; /* juster dette til ønsket bredde */
+  margin: 20px auto; /* dette vil sentrere komponenten horisontalt og setter margin-top til 20px */
+  padding: 50px;
+  max-width: 450px;
+  height: 50%;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: rgb(255, 0, 110);
+  border-width: 0.6cm;
+
+  position: relative; /* posisjonering i forhold til den normale flyten */
+  bottom: auto; /* standardverdi for å unngå å feste til bunnen */
+}
+
+

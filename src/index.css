@@ -87,7 +87,6 @@ textarea {
   font-size: 3rem;
   padding: 5%;
   border-bottom: 1px solid white;
-  max-width: 60%;
   margin: 0 auto;
 }
 
@@ -102,10 +101,29 @@ textarea {
   transition: background-color 0.3s ease; /* Gjør overgangen mykere når musen går over */
 }
 
+.content {
+  background: orange;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
 .lagrecontainer {
   text-align: center;
 }
 
 .lagreknapp:hover {
   background-color: #87ceeb; /* Litt mørkere blå for hover-effekt */
+}
+
+.arrow {
+  background-image: url('data:image/svg+xml,\00003csvg focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">\00003cpath fill="%239aa0a6" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z">\00003c/path>\00003c/svg>');
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+.tidligere-svar-rad {
+  display: "flex";
+  justify-content: "space-between";
 }

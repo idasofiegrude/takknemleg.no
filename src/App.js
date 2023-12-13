@@ -6,8 +6,10 @@ import "./index.css";
 function App() {
   return (
     <main className="App">
-      <h1 className="hovedoverskrift">TAKKNEMLEG.NO</h1>
-      <SvarSide />
+      <div className="content">
+        <h1 className="hovedoverskrift">TAKKNEMLEG.NO</h1>
+        <SvarSide />
+      </div>
     </main>
   );
 }

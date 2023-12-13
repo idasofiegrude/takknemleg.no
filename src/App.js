@@ -1,21 +1,14 @@
-import React from 'react';
-import SvarBox from './components/SvarBox';
-import TextComponent from './components/TextComponent';
-import HamburgerMenu from './components/HamburgerMeny'
+import React from "react";
+import SvarSide from "./components/svarside";
 
-
-import './index.css';
+import "./index.css";
 
 function App() {
   return (
-    <div className="App">
-
-      <HamburgerMenu/>
-      <TextComponent text="List tre ting du er takknemlig for idag."  />
-      <SvarBox />
-
-
-    </div>
+    <main className="App">
+      <h1 className="hovedoverskrift">TAKKNEMLEG.NO</h1>
+      <SvarSide />
+    </main>
   );
 }
 

@@ -7,10 +7,7 @@ function App() {
   return (
     <main className="App">
       <div className="content">
-        <h1 className="hovedoverskrift">
-          <div>TAKKNEMLEG</div>
-          <div>.no</div>
-        </h1>
+        <h1 className="hovedoverskrift">TAKKNEMLEG.NO</h1>
         <SvarSide />
       </div>
     </main>

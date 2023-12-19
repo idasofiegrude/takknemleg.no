@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(142, 202, 230);
+  background-color: rgb(57, 0, 153);
 }
 
 code {
@@ -83,9 +83,9 @@ textarea {
 .hovedoverskrift {
   color: lightblue;
   text-align: center; /* Senterer teksten */
-  margin-top: 100px;
+  margin-top: 50px;
   font-size: 3rem;
-  padding: 10%;
+  padding: 5%;
   border-bottom: 1px solid white;
   margin: 0 auto;
 }
@@ -102,9 +102,9 @@ textarea {
 }
 
 .content {
-  background: rgb(57, 0, 153);
+  background: orange;
   width: 90%;
-  max-width: 800px;
+  max-width: 600px;
   margin: auto;
 }
 

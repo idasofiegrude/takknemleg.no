@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(170, 213, 118);
+  background-color: rgb(142, 202, 230);
 }
 
 code {
@@ -16,14 +16,14 @@ code {
 .SpørsmålsComponent {
   color: black;
   font-size: large;
-  background-color: rgb(244, 210, 210);
+  background-color: wheat;
   padding: 20px; /* legger til litt plass rundt teksten */
   border-radius: 5px; /* gjør hjørnene på boksen litt rundet */
   width: 45%; /* setter en fast bredde på boksen */
   margin: 25% auto 80px; /* sentrerer boksen horisontalt og setter margin-bottom */
   border-style: solid;
-  border-color: white;
-  border-width: 0.06cm;
+  border-color: rgb(251, 86, 7);
+  border-width: 0.08cm;
   margin-top: 10%;
 }
 
@@ -36,7 +36,7 @@ textarea {
 
 .SvarBox {
   font-size: 18px;
-  background-color: rgb(244, 210, 210);
+  background-color: wheat;
   display: flex;
   align-items: center;
   width: 55%; /* juster dette til ønsket bredde */
@@ -46,8 +46,8 @@ textarea {
   height: 100%;
   border-radius: 7px;
   border-style: solid;
-  border-color: white;
-  border-width: 0.1cm;
+  border-color: rgb(255, 0, 110);
+  border-width: 0.2cm;
   line-height: 1.7;
 
   position: relative; /* posisjonering i forhold til den normale flyten */
@@ -99,9 +99,6 @@ textarea {
   border-radius: 5px; /* Runde hjørner */
   cursor: pointer; /* Endrer markøren til en peker */
   transition: background-color 0.3s ease; /* Gjør overgangen mykere når musen går over */
-  border-style: solid;
-  border-color: darkblue;
-  border-width: 0.05cm;
 }
 
 .content {

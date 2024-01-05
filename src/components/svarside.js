@@ -16,16 +16,14 @@ function SvarSide() {
     },
     {
       navn: "Ida",
-      overskrift: "Folk i livet mitt",
-      innhold:
-        "Takk for at Ole vil vær me meg. Takk for at mamma e der for meg",
+      overskrift: "Takk for muligheten",
+      innhold: "Takk for muligheten t å reisa.",
       id: 2,
     },
     {
       navn: "Ida",
       overskrift: "Mat",
-      innhold:
-        "Takk for at kyllingsalaten blei så god. Takk for at me har med oss lunsj og kan spisa oss mette.",
+      innhold: "Takk for at kyllingsalaten blei så god.",
       id: 3,
     },
   ]);

@@ -80,7 +80,7 @@ import React, { useState } from "react";
 import SvarBox from "./SvarBox";
 import SpørsmålsComponent from "./SpørsmålComponent";
 import TidligereSvar from "./TidligereSvar";
-import API from "../../api";
+import API from "../api";
 
 import "../index.css";
 

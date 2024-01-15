@@ -121,7 +121,7 @@ function SvarSide() {
     setTidligereSvar(nySvarliste);
 
     // Send POST-forespørsel til Flask API
-    API.post("/post/svar", svarObject)
+    API.post("http://localhost:8080/post/svar", svarObject)
       .then((response) => {
         console.log("Svar lagret:", response.data);
       })

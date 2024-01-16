@@ -5,7 +5,7 @@ const SvarListe = ({ svarListe }) => {
   // Denne funksjonen kalles når et svar blir klikket på
   const handleSvarClick = (valgtSvar) => {
     // Viser en alert med informasjon om svaret
-    alert(`Du klikket på: ${valgtSvar.overskrift} - ${valgtSvar.innhold}`);
+    alert(`Du klikket på: ${valgtSvar.overskrift} - ${valgtSvar.svar_innhold}`);
   };
 
   // Returnerer JSX for å vise listen over svar

@@ -9,36 +9,31 @@ import "../index.css";
 function SvarSide() {
   const [tidligereSvar, setTidligereSvar] = useState([]);
 
-  useEffect(() => {
-    const hentTidligereSvar = async () => {
-      try {
-        const response = await API.get("http://localhost:8080/svar");
-        setTidligereSvar(response.data);
-      } catch (error) {
-        console.error("Feil ved henting av tidligere svar:", error);
-      }
-    };
+  const hentTidligereSvar = async () => {
+    try {
+      const response = await API.get("/svar");
+      setTidligereSvar(response.data);
+    } catch (error) {
+      console.error("Feil ved henting av tidligere svar:", error);
+    }
+  };
 
+  useEffect(() => {
     hentTidligereSvar();
   }, []); // Denne effekten kjøres kun én gang når komponenten monteres
-
-  let [idCounter, setIdCounter] = useState(4);
 
   function Lagrefunksjon(svaret) {
     let svarObject = {
       navn: "Ida",
       overskrift: "Tre ting",
       svar_innhold: svaret,
-      id: idCounter,
     };
-    setIdCounter(idCounter + 1);
-    let nySvarliste = [svarObject, ...tidligereSvar];
-    setTidligereSvar(nySvarliste);
 
     // Send POST-forespørsel til Flask API
-    API.post("http://localhost:8080/svar", svarObject)
+    API.post("/svar", svarObject)
       .then((response) => {
         console.log("Svar lagret:", response.data);
+        hentTidligereSvar();
       })
       .catch((error) => {
         console.error("Feil ved lagring av svar:", error);

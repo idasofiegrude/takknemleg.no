@@ -15,9 +15,9 @@ const SvarListe = ({ svarListe }) => {
 
       {/* Bruker map for å liste ut hvert svar */}
       {svarListe.map((enkelSvar) => (
-        <div>
+        <div key={enkelSvar.svar_id}>
           <div
-            key={enkelSvar.id} // Bruker id som nøkkel for hvert element
+            // Bruker id som nøkkel for hvert element
             onClick={() => handleSvarClick(enkelSvar)} // Setter opp klikk-håndtering
             className="klikkbart-svar" // CSS-klasse for styling
           >

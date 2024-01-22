@@ -23,9 +23,11 @@ function SvarSide() {
   }, []); // Denne effekten kjøres kun én gang når komponenten monteres
 
   function Lagrefunksjon(svaret) {
+    let svarTekst = svaret.length > 20 ? svaret.slice(0, 30) + "..." : svaret;
+
     let svarObject = {
       navn: "Ida",
-      overskrift: "Tre ting",
+      overskrift: svarTekst,
       svar_innhold: svaret,
     };
 

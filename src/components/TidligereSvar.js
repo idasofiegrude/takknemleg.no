@@ -2,26 +2,27 @@ import React from "react";
 import Arrow from "./Arrow";
 
 const SvarListe = ({ svarListe }) => {
-  // Denne funksjonen kalles når et svar blir klikket på
+  // Hent de siste 15 svarene
+  const sisteSvar = svarListe.slice(-15);
+  const omvendtSvarListe = [...sisteSvar].reverse();
+
   const handleSvarClick = (valgtSvar) => {
     // Viser en alert med informasjon om svaret
     alert(`Du klikket på: ${valgtSvar.overskrift} - ${valgtSvar.svar_innhold}`);
   };
 
-  // Returnerer JSX for å vise listen over svar
+  // Returnerer JSX for å vise listen over de siste svarene
   return (
     <section className="svarliste">
       <h1>Dine takknemligheter:</h1>
 
-      {/* Bruker map for å liste ut hvert svar */}
-      {svarListe.map((enkelSvar) => (
+      {/* Bruker map for å liste ut hvert av de siste svarene */}
+      {omvendtSvarListe.map((enkelSvar) => (
         <div key={enkelSvar.svar_id}>
           <div
-            // Bruker id som nøkkel for hvert element
-            onClick={() => handleSvarClick(enkelSvar)} // Setter opp klikk-håndtering
-            className="klikkbart-svar" // CSS-klasse for styling
+            onClick={() => handleSvarClick(enkelSvar)}
+            className="klikkbart-svar"
           >
-            {/* Viser overskrift og innhold for hvert svar */}
             <span
               className="tidligere-svar-rad"
               style={{ display: "flex", justifyContent: "space-between" }}
@@ -29,7 +30,6 @@ const SvarListe = ({ svarListe }) => {
               {enkelSvar.overskrift}
               <Arrow />
             </span>
-
             <br />
           </div>
         </div>

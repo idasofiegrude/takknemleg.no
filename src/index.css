@@ -63,6 +63,7 @@ textarea {
   margin-top: 15%;
   margin-bottom: 15%;
   font-size: 1.3rem;
+  width: 65%;
   max-width: 65%;
   line-height: 1.8;
 }

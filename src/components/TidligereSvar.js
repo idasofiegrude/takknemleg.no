@@ -15,7 +15,7 @@ const SvarListe = ({ svarListe }) => {
 
   return (
     <section className="svarliste">
-      <h1>Dine takknemligheter:</h1>
+      <h1>Våre takknemligheter:</h1>
 
       {svarListe.map((enkelSvar) => (
         <React.Fragment key={enkelSvar.svar_id}>

@@ -1,38 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
+import SvarDetaljer from "./SvarDetaljer";
 import Arrow from "./Arrow";
 
 const SvarListe = ({ svarListe }) => {
-  // Hent de siste 15 svarene
-  const sisteSvar = svarListe.slice(-15);
-  const omvendtSvarListe = [...sisteSvar].reverse();
+  const [åpneSvar, setÅpneSvar] = useState([]);
 
-  const handleSvarClick = (valgtSvar) => {
-    // Viser en alert med informasjon om svaret
-    alert(`Du klikket på: ${valgtSvar.overskrift} - ${valgtSvar.svar_innhold}`);
+  const toggleSvar = (svarId) => {
+    setÅpneSvar(
+      åpneSvar.includes(svarId)
+        ? åpneSvar.filter((id) => id !== svarId)
+        : [...åpneSvar, svarId]
+    );
   };
 
-  // Returnerer JSX for å vise listen over de siste svarene
   return (
     <section className="svarliste">
       <h1>Dine takknemligheter:</h1>
 
-      {/* Bruker map for å liste ut hvert av de siste svarene */}
-      {omvendtSvarListe.map((enkelSvar) => (
-        <div key={enkelSvar.svar_id}>
+      {svarListe.map((enkelSvar) => (
+        <React.Fragment key={enkelSvar.svar_id}>
           <div
-            onClick={() => handleSvarClick(enkelSvar)}
+            onClick={() => toggleSvar(enkelSvar.svar_id)}
             className="klikkbart-svar"
           >
-            <span
-              className="tidligere-svar-rad"
-              style={{ display: "flex", justifyContent: "space-between" }}
-            >
+            <span className="tidligere-svar-rad">
               {enkelSvar.overskrift}
               <Arrow />
             </span>
-            <br />
           </div>
-        </div>
+          {åpneSvar.includes(enkelSvar.svar_id) && (
+            <SvarDetaljer svar={enkelSvar} />
+          )}
+        </React.Fragment>
       ))}
     </section>
   );

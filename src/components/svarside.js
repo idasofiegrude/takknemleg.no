@@ -44,7 +44,7 @@ function SvarSide() {
 
   return (
     <div className="App">
-      <SpørsmålsComponent spørsmål="List tre ting du er takknemlig for idag." />
+      <SpørsmålsComponent spørsmål="Nevn tre ting du er takknemlig for idag." />
       <SvarBox funksjonSomLagrer={Lagrefunksjon} />
       <TidligereSvar svarListe={tidligereSvar} />
     </div>

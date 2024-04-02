@@ -8,6 +8,9 @@ function App() {
       <div className="content">
         <h1 className="hovedoverskrift">TAKKNEMLEG.no</h1>
         <SvarSide />
+        <div className="footer">
+          Laget med ❤️ av <a href="https://idasofie.dev">Ida Sofie Grude</a>
+        </div>
       </div>
     </main>
   );

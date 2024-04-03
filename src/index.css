@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #12022b;
+  background-color: #db6b97;
 }
 
 code {
@@ -15,16 +15,17 @@ code {
 
 .SpørsmålsComponent {
   color: black;
-  font-size: large;
-  background-color: #e4e3d3;
+  font-size: 18px;
+  background-color: #f2ffe9;
   padding: 20px; /* legger til litt plass rundt teksten */
   border-radius: 5px; /* gjør hjørnene på boksen litt rundet */
   width: 50%; /* setter en fast bredde på boksen */
-  margin: 25% auto 0px; /* sentrerer boksen horisontalt og setter margin-bottom */
+  margin: 0 auto 0px; /* sentrerer boksen horisontalt og setter margin-bottom */
   border-style: solid;
-  border-color: #ffbc2d;
-  border-width: 4px;
+  border-color: #a6cf98;
+  border-width: 8px;
   margin-top: 10%;
+  padding: 25px;
 }
 
 textarea {
@@ -36,26 +37,32 @@ textarea {
 
 .SvarBox {
   font-size: 18px;
-  background-color: #e4e3d3;
+  background-color: #f2ffe9;
   display: flex;
-  align-items: center;
-  width: 55%; /* juster dette til ønsket bredde */
-  margin: 20px auto; /* dette vil sentrere komponenten horisontalt og setter margin-top til 20px */
-  padding: 65px;
-  max-width: 450px;
-  height: 100%;
+  margin: auto; /* Midtstill boksen */
+  margin-top: -0.3cm; /* setter svarbox tett inntill sprsmboksen */
+  margin-bottom: 20px;
+  width: 90%; /* Gjør boksen responsiv */
+  max-height: 450px;
   border-radius: 5px;
   border-style: solid;
-  border-color: #ffbc2d;
-  border-width: 4px;
+  border-color: #a6cf98;
+  border-width: 6px;
   line-height: 1.7;
+  padding-left: 25px;
+  padding-top: 25px;
+}
 
-  position: relative; /* posisjonering i forhold til den normale flyten */
-  bottom: auto; /* standardverdi for å unngå å feste til bunnen */
+/* Media query for skjermer mindre enn 600px */
+@media (max-width: 600px) {
+  .SvarBox {
+    font-size: 16px; /* Mindre tekststørrelse for små skjermer */
+    width: 90%;
+  }
 }
 
 .svarliste {
-  color: beige;
+  color: #f2ffe9;
   text-align: center;
   width: max-content; /* Setter bredden til innholdets bredde */
   margin: 0 auto; /* Sentrerer boksen horisontalt */
@@ -68,7 +75,7 @@ textarea {
   line-height: 1.8;
 }
 .svarliste span {
-  color: lightblue;
+  color: #f2ffe9;
   display: block; /* Gjør hvert span-element til en blokk, slik at det tar opp hele bredden */
   border-bottom: 1px solid white; /* Setter en kant rundt hver tekstlinje */
   margin: 5px 0; /* Legger til margin over og under hver boks */
@@ -88,7 +95,7 @@ textarea {
 }
 
 .hovedoverskrift {
-  color: lightblue;
+  color: #f2ffe9;
   text-align: center; /* Senterer teksten */
   margin-top: 50px;
   font-size: 2.5rem;
@@ -98,7 +105,7 @@ textarea {
 }
 
 .lagreknapp {
-  background-color: #add8e6; /* Lys blå bakgrunnsfarge */
+  background-color: #a6cf98; /* Lys blå bakgrunnsfarge */
   color: black; /* Hvit tekstfarge */
   border: none; /* Fjerner standard kantlinje */
   padding: 10px 20px; /* Legger til innvendig plass */

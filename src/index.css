@@ -14,18 +14,15 @@ code {
 }
 
 .SpørsmålsComponent {
-  color: black;
-  font-size: 18px;
   background-color: #f2ffe9;
-  padding: 20px; /* legger til litt plass rundt teksten */
-  border-radius: 5px; /* gjør hjørnene på boksen litt rundet */
-  width: 50%; /* setter en fast bredde på boksen */
-  margin: 0 auto 0px; /* sentrerer boksen horisontalt og setter margin-bottom */
-  border-style: solid;
-  border-color: #a6cf98;
-  border-width: 8px;
-  margin-top: 10%;
-  padding: 25px;
+  border: 8px solid #a6cf98;
+  border-radius: 5px;
+  color: #000;
+  font-size: 18px;
+  margin: 10% auto 0;
+  padding: 40px;
+  width: 50%;
+  transform: translateZ(10px) translateY(10px);
 }
 
 textarea {
